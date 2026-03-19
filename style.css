@@ -310,7 +310,7 @@ img {
 
 @media (min-width: 560px) {
   .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 }
 
@@ -424,6 +424,9 @@ img {
 }
 
 .skill-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   font-size: 0.875rem;
   font-weight: 400;
   padding: 0.4rem 0.875rem;
@@ -439,6 +442,88 @@ img {
   border-color: var(--accent);
   color: var(--accent);
   background: var(--accent-light);
+}
+
+.skill-icon {
+  display: block;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* ===========================
+   CERTIFICATES
+=========================== */
+.certs-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 560px) {
+  .certs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .certs-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cert-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  transition: all var(--transition);
+}
+
+.cert-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+  border-color: #d0d4f7;
+}
+
+.cert-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+}
+
+.cert-category {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  background: var(--accent-light);
+  padding: 0.2rem 0.5rem;
+  border-radius: 99px;
+}
+
+.cert-year {
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+}
+
+.cert-title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  line-height: 1.35;
+}
+
+.cert-issuer {
+  font-size: 0.8125rem;
+  color: var(--text-tertiary);
 }
 
 /* ===========================
@@ -511,6 +596,11 @@ img {
 .projects-grid .reveal:nth-child(2) { transition-delay: 0.1s; }
 .projects-grid .reveal:nth-child(3) { transition-delay: 0.2s; }
 .projects-grid .reveal:nth-child(4) { transition-delay: 0.3s; }
+.certs-grid .reveal:nth-child(2) { transition-delay: 0.08s; }
+.certs-grid .reveal:nth-child(3) { transition-delay: 0.16s; }
+.certs-grid .reveal:nth-child(4) { transition-delay: 0.24s; }
+.certs-grid .reveal:nth-child(5) { transition-delay: 0.32s; }
+.certs-grid .reveal:nth-child(6) { transition-delay: 0.40s; }
 .skills-wrapper .reveal:nth-child(2) { transition-delay: 0.1s; }
 .skills-wrapper .reveal:nth-child(3) { transition-delay: 0.2s; }
 
