@@ -43,6 +43,43 @@ a {
   text-decoration: none;
 }
 
+/* ===========================
+   ACESSIBILIDADE
+=========================== */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: #fff;
+  border-radius: var(--radius);
+  font-weight: 600;
+  z-index: 9999;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.nav-links a:focus-visible,
+.btn:focus-visible,
+.icon-link:focus-visible,
+.contact-item:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -136,6 +173,12 @@ img {
 
 .nav-links a:hover {
   color: var(--accent);
+}
+
+.nav-links a.active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 2px;
 }
 
 /* ===========================
@@ -660,6 +703,32 @@ img {
 }
 .skills-wrapper .reveal:nth-child(3) {
   transition-delay: 0.2s;
+}
+
+/* ===========================
+   DARK MODE
+=========================== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent: #7b8fff;
+    --accent-light: #1e2147;
+    --text-primary: #f0f0f5;
+    --text-secondary: #9aa3b8;
+    --text-tertiary: #6b7490;
+    --bg: #0f0f1a;
+    --bg-alt: #16162a;
+    --border: #2a2a3e;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.25);
+    --shadow-hover: 0 2px 8px rgba(0, 0, 0, 0.4), 0 8px 32px rgba(0, 0, 0, 0.35);
+  }
+
+  .nav {
+    background: rgba(15, 15, 26, 0.85);
+  }
+
+  .skill-icon {
+    filter: brightness(0.9);
+  }
 }
 
 /* ===========================

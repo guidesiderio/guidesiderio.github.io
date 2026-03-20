@@ -34,9 +34,9 @@ const sectionObserver = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         navLinks.forEach((link) => {
-          link.style.color = '';
+          link.classList.remove('active');
           if (link.getAttribute('href') === `#${entry.target.id}`) {
-            link.style.color = 'var(--accent)';
+            link.classList.add('active');
           }
         });
       }
