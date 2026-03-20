@@ -116,10 +116,9 @@ img {
 }
 
 .nav-logo {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--accent);
-  letter-spacing: -0.03em;
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
 }
 
 .nav-links {
