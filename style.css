@@ -1,7 +1,9 @@
 /* ===========================
    RESET & BASE
 =========================== */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -17,10 +19,10 @@
   --bg-alt: #f9f9fb;
   --border: #e5e7eb;
   --radius: 12px;
-  --font: 'Inter', system-ui, -apple-system, sans-serif;
+  --font: "Inter", system-ui, -apple-system, sans-serif;
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --shadow: 0 1px 3px rgba(0,0,0,.06), 0 4px 16px rgba(0,0,0,.05);
-  --shadow-hover: 0 2px 8px rgba(0,0,0,.08), 0 8px 32px rgba(0,0,0,.08);
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 2px 8px rgba(0, 0, 0, 0.08), 0 8px 32px rgba(0, 0, 0, 0.08);
 }
 
 html {
@@ -77,7 +79,7 @@ img {
 }
 
 .section-title::after {
-  content: '';
+  content: "";
   display: block;
   width: 2.5rem;
   height: 3px;
@@ -103,12 +105,14 @@ img {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid transparent;
-  transition: border-color var(--transition), box-shadow var(--transition);
+  transition:
+    border-color var(--transition),
+    box-shadow var(--transition);
 }
 
 .nav.scrolled {
   border-color: var(--border);
-  box-shadow: 0 1px 12px rgba(0,0,0,.06);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06);
 }
 
 .nav-logo {
@@ -232,10 +236,22 @@ img {
 }
 
 @keyframes scrollLine {
-  0%   { transform: scaleY(0); transform-origin: top; }
-  50%  { transform: scaleY(1); transform-origin: top; }
-  51%  { transform: scaleY(1); transform-origin: bottom; }
-  100% { transform: scaleY(0); transform-origin: bottom; }
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  50% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  51% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
 }
 
 /* ===========================
@@ -391,6 +407,27 @@ img {
   border-radius: 99px;
   background: var(--accent-light);
   color: var(--accent);
+}
+.badge-private {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  background: var(--bg-alt);
+  color: var(--text-tertiary);
+  border: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.card-institution {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  letter-spacing: 0.01em;
+  margin-top: -0.25rem;
 }
 
 /* ===========================
@@ -584,7 +621,9 @@ img {
 .reveal {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 
 .reveal.visible {
@@ -593,16 +632,36 @@ img {
 }
 
 /* Stagger child reveals inside grids */
-.projects-grid .reveal:nth-child(2) { transition-delay: 0.1s; }
-.projects-grid .reveal:nth-child(3) { transition-delay: 0.2s; }
-.projects-grid .reveal:nth-child(4) { transition-delay: 0.3s; }
-.certs-grid .reveal:nth-child(2) { transition-delay: 0.08s; }
-.certs-grid .reveal:nth-child(3) { transition-delay: 0.16s; }
-.certs-grid .reveal:nth-child(4) { transition-delay: 0.24s; }
-.certs-grid .reveal:nth-child(5) { transition-delay: 0.32s; }
-.certs-grid .reveal:nth-child(6) { transition-delay: 0.40s; }
-.skills-wrapper .reveal:nth-child(2) { transition-delay: 0.1s; }
-.skills-wrapper .reveal:nth-child(3) { transition-delay: 0.2s; }
+.projects-grid .reveal:nth-child(2) {
+  transition-delay: 0.1s;
+}
+.projects-grid .reveal:nth-child(3) {
+  transition-delay: 0.2s;
+}
+.projects-grid .reveal:nth-child(4) {
+  transition-delay: 0.3s;
+}
+.certs-grid .reveal:nth-child(2) {
+  transition-delay: 0.08s;
+}
+.certs-grid .reveal:nth-child(3) {
+  transition-delay: 0.16s;
+}
+.certs-grid .reveal:nth-child(4) {
+  transition-delay: 0.24s;
+}
+.certs-grid .reveal:nth-child(5) {
+  transition-delay: 0.32s;
+}
+.certs-grid .reveal:nth-child(6) {
+  transition-delay: 0.4s;
+}
+.skills-wrapper .reveal:nth-child(2) {
+  transition-delay: 0.1s;
+}
+.skills-wrapper .reveal:nth-child(3) {
+  transition-delay: 0.2s;
+}
 
 /* ===========================
    MOBILE NAV (≤ 480px)
