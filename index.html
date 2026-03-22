@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -50,9 +50,9 @@
     </script>
   </head>
   <body>
-    <a href="#sobre" class="skip-link">Pular para o conteúdo</a>
+    <a href="#main" class="skip-link">Pular para o conteúdo</a>
 
-    <!-- SVG SYMBOLS (reutilizados em múltiplos lugares) -->
+    <!-- SVG SYMBOLS -->
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
       <symbol id="icon-github" viewBox="0 0 24 24" fill="currentColor">
         <path
@@ -67,9 +67,26 @@
     </svg>
 
     <!-- NAV -->
-    <nav class="nav">
-      <img src="assets/icons/robot-svgrepo-com.svg" alt="Logo" class="nav-logo" />
-      <ul class="nav-links">
+    <nav class="nav" role="navigation" aria-label="Navegação principal">
+      <a href="#hero" class="nav-brand" aria-label="Início">
+        <img src="assets/icons/robot-svgrepo-com.svg" alt="" aria-hidden="true" class="nav-logo" />
+        <span class="nav-name">Guilherme</span>
+      </a>
+
+      <button
+        class="nav-menu-btn"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="nav-links"
+      >
+        <span class="hamburger" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+
+      <ul class="nav-links" id="nav-links" role="list">
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#projetos">Projetos</a></li>
         <li><a href="#certificados">Certificados</a></li>
@@ -78,18 +95,40 @@
       </ul>
     </nav>
 
+    <div class="nav-overlay" aria-hidden="true"></div>
+
     <main id="main">
       <!-- HERO -->
       <section class="hero" id="hero">
+        <div class="hero-bg" aria-hidden="true"></div>
         <div class="hero-content reveal">
+          <div class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            Disponível para oportunidades
+          </div>
           <p class="hero-greeting">Olá, eu sou</p>
-          <h1 class="hero-name">Guilherme Desidério</h1>
-          <p class="hero-role">Analista de Dados &amp; BI</p>
+          <h1 class="hero-name">Guilherme<br />Desidério</h1>
+          <p class="hero-role">Analista de Dados <span class="hero-role-sep">&amp;</span> BI</p>
           <p class="hero-description">
             Estudante de Ciência da Computação na UFPI e estagiário no TJPI e na UFPI. Transformo
             dados em decisões com pipelines, dashboards e automações.
           </p>
-          <div class="hero-links">
+          <div class="hero-cta">
+            <a href="#projetos" class="btn btn-primary">
+              Ver projetos
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
             <a
               href="https://github.com/guidesiderio"
               target="_blank"
@@ -114,7 +153,7 @@
             </a>
           </div>
         </div>
-        <div class="hero-scroll-hint">
+        <div class="hero-scroll-hint" aria-hidden="true">
           <span></span>
         </div>
       </section>
@@ -123,8 +162,8 @@
       <section class="section" id="sobre">
         <div class="container">
           <h2 class="section-title reveal">Sobre mim</h2>
-          <div class="about-grid reveal">
-            <div class="about-text">
+          <div class="about-grid">
+            <div class="about-text reveal">
               <p>
                 Estudante de Ciência da Computação na Universidade Federal do Piauí, estagiário no
                 TJPI na área de governança de dados e na PRAD — Pró-Reitoria de Administração da
@@ -137,6 +176,20 @@
                 interno — sempre com foco em apoiar a tomada de decisão.
               </p>
             </div>
+            <div class="about-stats reveal">
+              <div class="stat">
+                <span class="stat-number">2</span>
+                <span class="stat-label">Estágios ativos</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">3+</span>
+                <span class="stat-label">Projetos de dados</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">6</span>
+                <span class="stat-label">Certificados</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -146,15 +199,21 @@
         <div class="container">
           <h2 class="section-title reveal">Projetos</h2>
           <div class="projects-grid">
+
             <article class="card reveal">
               <div class="card-header">
-                <span class="card-icon">🐳</span>
+                <div class="card-icon-wrap card-icon--blue" aria-hidden="true">
+                  <!-- Docker icon -->
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M13.983 11.078h2.119a.186.186 0 0 0 .186-.185V9.006a.186.186 0 0 0-.186-.186h-2.119a.185.185 0 0 0-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 0 0 .186-.186V3.574a.186.186 0 0 0-.186-.185h-2.118a.185.185 0 0 0-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 0 0 .186-.186V6.29a.186.186 0 0 0-.186-.185h-2.118a.185.185 0 0 0-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 0 0 .184-.186V6.29a.185.185 0 0 0-.185-.185H8.1a.185.185 0 0 0-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 0 0 .185-.186V6.29a.185.185 0 0 0-.185-.185H5.136a.186.186 0 0 0-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 0 0 .186-.185V9.006a.186.186 0 0 0-.186-.186h-2.118a.185.185 0 0 0-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 0 0 .184-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.185.185 0 0 0-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 0 0 .185-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.186.186 0 0 0-.186.185v1.888c0 .102.084.185.186.185m-2.92 0h2.12a.185.185 0 0 0 .184-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.185.185 0 0 0-.185.185v1.888c0 .102.083.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 0 0-.75.748 11.376 11.376 0 0 0 .692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137.983.003 1.963-.086 2.93-.266a12.248 12.248 0 0 0 3.823-1.389c.98-.567 1.86-1.288 2.61-2.136 1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288Z"/>
+                  </svg>
+                </div>
                 <div class="card-links">
                   <a
                     href="https://github.com/guidesiderio/docker-data-project"
                     target="_blank"
                     rel="noopener"
-                    aria-label="Ver código"
+                    aria-label="Ver código no GitHub"
                     class="icon-link"
                   >
                     <svg
@@ -165,6 +224,7 @@
                       fill="none"
                       stroke="currentColor"
                       stroke-width="2"
+                      aria-hidden="true"
                     >
                       <path
                         d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
@@ -190,13 +250,20 @@
 
             <article class="card reveal">
               <div class="card-header">
-                <span class="card-icon">📊</span>
+                <div class="card-icon-wrap card-icon--violet" aria-hidden="true">
+                  <!-- Bar chart icon -->
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="10" width="4" height="10"/>
+                    <rect x="10" y="6" width="4" height="14"/>
+                    <rect x="17" y="2" width="4" height="18"/>
+                  </svg>
+                </div>
                 <div class="card-links">
                   <span class="badge-private">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="13"
-                      height="13"
+                      width="12"
+                      height="12"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -206,7 +273,7 @@
                       <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
                       <path d="M7 11V7a5 5 0 0 1 10 0v4" />
                     </svg>
-                    Projeto Institucional
+                    Institucional
                   </span>
                 </div>
               </div>
@@ -226,13 +293,19 @@
 
             <article class="card reveal">
               <div class="card-header">
-                <span class="card-icon">📈</span>
+                <div class="card-icon-wrap card-icon--green" aria-hidden="true">
+                  <!-- Line chart / trend icon -->
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+                    <polyline points="16 7 22 7 22 13"/>
+                  </svg>
+                </div>
                 <div class="card-links">
                   <span class="badge-private">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="13"
-                      height="13"
+                      width="12"
+                      height="12"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -242,7 +315,7 @@
                       <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
                       <path d="M7 11V7a5 5 0 0 1 10 0v4" />
                     </svg>
-                    Projeto Institucional
+                    Institucional
                   </span>
                 </div>
               </div>
@@ -260,6 +333,7 @@
                 <span class="tag">Excel</span>
               </div>
             </article>
+
           </div>
         </div>
       </section>
@@ -327,12 +401,12 @@
       </section>
 
       <!-- HABILIDADES -->
-      <section class="section" id="habilidades">
+      <section class="section section-alt" id="habilidades">
         <div class="container">
           <h2 class="section-title reveal">Habilidades</h2>
           <div class="skills-wrapper">
             <div class="skills-group reveal">
-              <h3 class="skills-group-title">Dados & BI</h3>
+              <h3 class="skills-group-title">Dados &amp; BI</h3>
               <div class="skills-list">
                 <span class="skill-pill">
                   <img
@@ -456,7 +530,7 @@
               </div>
             </div>
             <div class="skills-group reveal">
-              <h3 class="skills-group-title">Dev & Ferramentas</h3>
+              <h3 class="skills-group-title">Dev &amp; Ferramentas</h3>
               <div class="skills-list">
                 <span class="skill-pill">
                   <img
@@ -468,7 +542,7 @@
                     loading="lazy"
                     class="skill-icon"
                   />
-                  Git & GitHub
+                  Git &amp; GitHub
                 </span>
                 <span class="skill-pill">
                   <img
@@ -489,9 +563,9 @@
       </section>
 
       <!-- CONTATO -->
-      <section class="section section-alt" id="contato">
+      <section class="section" id="contato">
         <div class="container container-narrow">
-          <h2 class="section-title reveal">Contato</h2>
+          <h2 class="section-title reveal">Vamos conversar</h2>
           <p class="contact-intro reveal">
             Se você procura alguém apaixonado por dados, com experiência em ambientes institucionais
             e visão analítica, vamos conectar!
@@ -526,6 +600,7 @@
                 fill="none"
                 stroke="currentColor"
                 stroke-width="1.5"
+                aria-hidden="true"
               >
                 <path
                   d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
