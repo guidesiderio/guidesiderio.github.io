@@ -477,6 +477,58 @@ button:focus-visible {
 }
 
 /* ===========================
+   ABOUT + EXPERIENCE ROW
+=========================== */
+.about-exp-row {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 960px) {
+  .about-exp-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-exp-row .section {
+    padding-block: 5rem;
+  }
+
+  .about-exp-row .container {
+    max-width: 560px;
+  }
+
+  .about-section .container {
+    margin-left: auto;
+    margin-right: 2.5rem;
+  }
+
+  .exp-section .container {
+    margin-right: auto;
+    margin-left: 2.5rem;
+  }
+}
+
+/* About geometric background */
+.about-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-geo-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.about-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===========================
    ABOUT
 =========================== */
 .about-grid {
@@ -486,10 +538,21 @@ button:focus-visible {
   align-items: start;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 640px) and (max-width: 959px) {
   .about-grid {
     grid-template-columns: 1fr auto;
     gap: 5rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about-stats {
+    flex-direction: row;
   }
 }
 
@@ -511,7 +574,7 @@ button:focus-visible {
   flex-shrink: 0;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 640px) and (max-width: 959px) {
   .about-stats {
     flex-direction: column;
     gap: 2rem;
@@ -861,12 +924,6 @@ button:focus-visible {
   gap: 1.25rem;
 }
 
-@media (min-width: 560px) {
-  .experience-grid {
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  }
-}
-
 .exp-card {
   background: var(--bg);
   border: 1px solid var(--border);
@@ -1169,6 +1226,12 @@ button:focus-visible {
 
   .nav-overlay {
     background: rgba(0, 0, 0, 0.6);
+  }
+
+  .about-geo-bg circle,
+  .about-geo-bg polygon,
+  .about-geo-bg rect {
+    fill: var(--primary);
   }
 }
 
