@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio — Guilherme Desidério</title>
+    <meta name="color-scheme" content="light dark" />
+    <title>&lt;gd. /&gt; — Guilherme Desidério</title>
     <meta
       name="description"
       content="Portfólio de Guilherme Desidério — Analista de Dados & BI. Estudante de Ciência da Computação na UFPI, com experiência em SQL, Power BI, Qlik Sense, Python e Docker."
@@ -29,6 +30,7 @@
 
     <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="style.css" />
+    <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -168,7 +170,7 @@
             <a
               href="https://github.com/guidesiderio"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               class="btn btn-outline"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" aria-hidden="true">
@@ -179,13 +181,36 @@
             <a
               href="https://www.linkedin.com/in/guidesiderio/"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               class="btn btn-outline"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" aria-hidden="true">
                 <use href="#icon-linkedin" />
               </svg>
               LinkedIn
+            </a>
+            <a
+              href="assets/curriculum.pdf"
+              download="curriculo-guilherme-desiderio.pdf"
+              class="btn btn-outline"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              <span data-lang-pt="Currículo" data-lang-en="Resume">Currículo</span>
             </a>
           </div>
         </div>
@@ -197,41 +222,6 @@
       <!-- SOBRE + EXPERIÊNCIAS (side by side) -->
       <div class="about-exp-row">
         <section class="section about-section" id="sobre">
-          <!-- Geometric background -->
-          <svg
-            class="about-geo-bg"
-            aria-hidden="true"
-            preserveAspectRatio="none"
-            viewBox="0 0 800 600"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="680" cy="80" r="120" fill="var(--primary)" opacity="0.04" />
-            <circle cx="720" cy="480" r="80" fill="var(--primary)" opacity="0.03" />
-            <polygon points="60,520 120,420 180,520" fill="var(--primary)" opacity="0.045" />
-            <polygon points="600,300 660,200 720,300" fill="var(--primary)" opacity="0.035" />
-            <rect
-              x="40"
-              y="60"
-              width="90"
-              height="90"
-              rx="12"
-              fill="var(--primary)"
-              opacity="0.03"
-              transform="rotate(15 85 105)"
-            />
-            <circle cx="160" cy="180" r="40" fill="var(--primary)" opacity="0.025" />
-            <polygon points="400,500 440,430 480,500" fill="var(--primary)" opacity="0.03" />
-            <rect
-              x="520"
-              y="100"
-              width="60"
-              height="60"
-              rx="8"
-              fill="var(--primary)"
-              opacity="0.025"
-              transform="rotate(-20 550 130)"
-            />
-          </svg>
           <div class="container">
             <h2 class="section-title reveal" data-lang-pt="Sobre mim" data-lang-en="About me">
               Sobre mim
@@ -373,7 +363,7 @@
                   <a
                     href="https://github.com/guidesiderio/docker-data-project"
                     target="_blank"
-                    rel="noopener"
+                    rel="noopener noreferrer"
                     aria-label="Ver código no GitHub"
                     class="icon-link"
                   >
@@ -818,7 +808,7 @@
             <a
               href="https://wa.me/5586995704214"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               class="contact-item"
             >
               <svg
@@ -856,7 +846,7 @@
             <a
               href="https://github.com/guidesiderio"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               class="contact-item"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true">
@@ -867,7 +857,7 @@
             <a
               href="https://www.linkedin.com/in/guidesiderio/"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               class="contact-item"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true">
@@ -875,7 +865,7 @@
               </svg>
               linkedin.com/in/guidesiderio
             </a>
-            <a href="assets/curriculum.pdf" download class="contact-item contact-item--download">
+            <a href="assets/curriculum.pdf" download="curriculo-guilherme-desiderio.pdf" class="contact-item contact-item--download">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -902,10 +892,10 @@
     <!-- FOOTER -->
     <footer class="footer">
       <p
-        data-lang-pt="Feito com cuidado por Guilherme Desidério · 2026"
-        data-lang-en="Crafted with care by Guilherme Desidério · 2026"
+        data-lang-pt="© 2026 Guilherme Desidério. Todos os direitos reservados."
+        data-lang-en="© 2026 Guilherme Desidério. All rights reserved."
       >
-        Feito com cuidado por Guilherme Desidério · 2026
+        &copy; 2026 Guilherme Desidério. Todos os direitos reservados.
       </p>
     </footer>
 
