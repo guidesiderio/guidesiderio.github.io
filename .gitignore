@@ -1,3 +1,10 @@
 .claude
 CLAUDE.md
 .vscode/
+
+# Playwright MCP
+.playwright-mcp/
+
+# Arquivos temporários de verificação
+full-page-check.png
+snapshot-check.md
