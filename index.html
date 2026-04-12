@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="light dark" />
+    <meta name="color-scheme" content="dark" />
     <title>&lt;gd. /&gt; — Guilherme Desidério</title>
     <meta
       name="description"
@@ -34,7 +34,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
 
@@ -118,7 +118,10 @@
       <!-- HERO -->
       <section class="hero" id="hero">
         <div class="hero-bg" aria-hidden="true"></div>
-        <div class="hero-content reveal">
+        <div class="hero-content">
+          <div class="viewfinder-corner viewfinder-tl" aria-hidden="true"></div>
+          <div class="viewfinder-corner viewfinder-br" aria-hidden="true"></div>
+          <span class="coordinate-marker">00 — PORTFOLIO</span>
           <div class="hero-badge">
             <span class="hero-badge-dot"></span>
             <span data-lang-pt="Disponível para oportunidades" data-lang-en="Open to opportunities">
@@ -126,12 +129,12 @@
             </span>
           </div>
           <p class="hero-greeting" data-lang-pt="Olá, eu sou" data-lang-en="Hi, I'm">Olá, eu sou</p>
-          <h1 class="hero-name">
+          <h1 class="hero-name hero-title-anim">
             Guilherme
             <br />
             Desidério
           </h1>
-          <p class="hero-role">
+          <p class="hero-role hero-tagline-anim">
             <span data-lang-pt="Analista de Dados" data-lang-en="Data Analyst">
               Analista de Dados
             </span>
@@ -146,7 +149,7 @@
             Estudante de Ciência da Computação na UFPI e estagiário no TJPI e na UFPI. Transformo
             dados em decisões com pipelines, dashboards e automações.
           </p>
-          <div class="hero-cta">
+          <div class="hero-cta hero-actions-anim">
             <a
               href="#projetos"
               class="btn btn-primary"
@@ -223,9 +226,12 @@
       <div class="about-exp-row">
         <section class="section about-section" id="sobre">
           <div class="container">
-            <h2 class="section-title reveal" data-lang-pt="Sobre mim" data-lang-en="About me">
-              Sobre mim
-            </h2>
+            <div class="section-header reveal">
+              <span class="section-number">01</span>
+              <h2 class="section-title" data-lang-pt="Sobre mim" data-lang-en="About me">
+                Sobre mim
+              </h2>
+            </div>
             <div class="about-grid">
               <div class="about-text reveal">
                 <p
@@ -245,9 +251,12 @@
 
         <section class="section section-alt exp-section" id="experiencias">
           <div class="container">
-            <h2 class="section-title reveal" data-lang-pt="Experiências" data-lang-en="Experience">
-              Experiências
-            </h2>
+            <div class="section-header reveal">
+              <span class="section-number">02</span>
+              <h2 class="section-title" data-lang-pt="Experiências" data-lang-en="Experience">
+                Experiências
+              </h2>
+            </div>
             <div class="experience-grid">
               <article class="exp-card reveal">
                 <div class="exp-header">
@@ -345,9 +354,12 @@
       <!-- PROJETOS -->
       <section class="section" id="projetos">
         <div class="container">
-          <h2 class="section-title reveal" data-lang-pt="Projetos" data-lang-en="Projects">
-            Projetos
-          </h2>
+          <div class="section-header reveal">
+            <span class="section-number">03</span>
+            <h2 class="section-title" data-lang-pt="Projetos" data-lang-en="Projects">
+              Projetos
+            </h2>
+          </div>
           <div class="projects-grid">
             <article class="card reveal">
               <div class="card-header">
@@ -402,6 +414,8 @@
                 <span class="tag">Docker</span>
                 <span class="tag">Jupyter</span>
               </div>
+              <div class="corner-tl" aria-hidden="true"></div>
+              <div class="corner-br" aria-hidden="true"></div>
             </article>
 
             <article class="card reveal">
@@ -469,6 +483,8 @@
                 <span class="tag">Qlik Sense</span>
                 <span class="tag">Set Analysis</span>
               </div>
+              <div class="corner-tl" aria-hidden="true"></div>
+              <div class="corner-br" aria-hidden="true"></div>
             </article>
 
             <article class="card reveal">
@@ -534,6 +550,8 @@
                 <span class="tag">PostgreSQL</span>
                 <span class="tag">Qlik Sense</span>
               </div>
+              <div class="corner-tl" aria-hidden="true"></div>
+              <div class="corner-br" aria-hidden="true"></div>
             </article>
 
             <article class="card reveal">
@@ -598,6 +616,8 @@
                 <span class="tag">DataJud</span>
                 <span class="tag">CNJ</span>
               </div>
+              <div class="corner-tl" aria-hidden="true"></div>
+              <div class="corner-br" aria-hidden="true"></div>
             </article>
 
             <article class="card reveal">
@@ -667,6 +687,8 @@
                 <span class="tag">CSS</span>
                 <span class="tag">JavaScript</span>
               </div>
+              <div class="corner-tl" aria-hidden="true"></div>
+              <div class="corner-br" aria-hidden="true"></div>
             </article>
           </div>
         </div>
@@ -675,9 +697,12 @@
       <!-- HABILIDADES -->
       <section class="section section-alt" id="habilidades">
         <div class="container">
-          <h2 class="section-title reveal" data-lang-pt="Habilidades" data-lang-en="Skills">
-            Habilidades
-          </h2>
+          <div class="section-header reveal">
+            <span class="section-number">04</span>
+            <h2 class="section-title" data-lang-pt="Habilidades" data-lang-en="Skills">
+              Habilidades
+            </h2>
+          </div>
           <div class="skills-wrapper">
             <div class="skills-group reveal">
               <h3
@@ -929,13 +954,16 @@
       <!-- FORMAÇÃO -->
       <section class="section" id="formacao">
         <div class="container">
-          <h2
-            class="section-title reveal"
-            data-lang-pt="Formação Acadêmica"
-            data-lang-en="Education"
-          >
-            Formação Acadêmica
-          </h2>
+          <div class="section-header reveal">
+            <span class="section-number">05</span>
+            <h2
+              class="section-title"
+              data-lang-pt="Formação Acadêmica"
+              data-lang-en="Education"
+            >
+              Formação Acadêmica
+            </h2>
+          </div>
           <div class="education-grid">
             <article class="edu-card reveal">
               <div class="edu-icon-wrap" aria-hidden="true">
@@ -978,9 +1006,12 @@
       <!-- CERTIFICADOS -->
       <section class="section section-alt" id="certificados">
         <div class="container">
-          <h2 class="section-title reveal" data-lang-pt="Certificados" data-lang-en="Certificates">
-            Certificados
-          </h2>
+          <div class="section-header reveal">
+            <span class="section-number">06</span>
+            <h2 class="section-title" data-lang-pt="Certificados" data-lang-en="Certificates">
+              Certificados
+            </h2>
+          </div>
           <div class="certs-grid">
             <article class="cert-card reveal">
               <div class="cert-meta">
@@ -1017,9 +1048,12 @@
       <!-- CONTATO -->
       <section class="section" id="contato">
         <div class="container container-narrow">
-          <h2 class="section-title reveal" data-lang-pt="Vamos conversar" data-lang-en="Let's talk">
-            Vamos conversar
-          </h2>
+          <div class="section-header reveal">
+            <span class="section-number">07</span>
+            <h2 class="section-title" data-lang-pt="Vamos conversar" data-lang-en="Let's talk">
+              Vamos conversar
+            </h2>
+          </div>
           <p
             class="contact-intro reveal"
             data-lang-pt="Se você procura alguém apaixonado por dados, com experiência em ambientes institucionais e visão analítica, vamos conectar!"
