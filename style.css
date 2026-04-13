@@ -1087,23 +1087,15 @@ button:focus-visible {
   width: 24px;
   height: 24px;
   object-fit: contain;
-  filter: grayscale(100%) brightness(0.8);
-  transition: filter 150ms ease;
-}
-
-.skill-pill:hover .skill-icon {
   filter: grayscale(0%) brightness(1);
+  transition: filter 150ms ease;
 }
 
 /* SVG skill icons */
 .skill-pill svg.skill-icon {
   filter: none;
-  opacity: 0.6;
-  transition: opacity 150ms ease;
-}
-
-.skill-pill:hover svg.skill-icon {
   opacity: 1;
+  transition: opacity 150ms ease;
 }
 
 /* ===========================
