@@ -134,7 +134,6 @@
     <main id="main">
       <!-- HERO -->
       <section class="hero" id="hero">
-        <div class="hero-bg" aria-hidden="true"></div>
         <div class="hero-content">
           <div class="viewfinder-corner viewfinder-tl" aria-hidden="true"></div>
           <div class="viewfinder-corner viewfinder-br" aria-hidden="true"></div>
@@ -145,7 +144,6 @@
               Disponível para oportunidades
             </span>
           </div>
-          <p class="hero-greeting" data-lang-pt="Olá, eu sou" data-lang-en="Hi, I'm">Olá, eu sou</p>
           <h1 class="hero-name hero-title-anim">
             Guilherme
             <br />
@@ -1109,6 +1107,7 @@
               target="_blank"
               rel="noopener noreferrer"
               class="contact-item"
+              aria-label="WhatsApp"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -1124,7 +1123,7 @@
               </svg>
               WhatsApp
             </a>
-            <a href="mailto:guilhermedesiderio23@gmail.com" class="contact-item">
+            <a href="mailto:guilhermedesiderio23@gmail.com" class="contact-item" aria-label="Email guilhermedesiderio23@gmail.com">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -1193,7 +1192,7 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <p
         data-lang-pt="© 2026 Guilherme Desidério. Todos os direitos reservados."
         data-lang-en="© 2026 Guilherme Desidério. All rights reserved."

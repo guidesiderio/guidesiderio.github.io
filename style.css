@@ -121,7 +121,9 @@ img {
 }
 
 a:focus-visible,
-button:focus-visible {
+button:focus-visible,
+.contact-item:focus-visible,
+.skill-pill:focus-visible {
   outline: 2px solid var(--on-surface);
   outline-offset: 3px;
 }
@@ -205,19 +207,7 @@ button:focus-visible {
   margin-bottom: 0;
 }
 
-/* Remove old underline decoration */
-.section-title::after {
-  display: none;
-}
 
-/* Section tick */
-.section-tick {
-  display: block;
-  width: 1px;
-  height: 24px;
-  background: var(--outline-variant);
-  margin-bottom: var(--spacing-md);
-}
 
 /* ===========================
    NAV
@@ -403,14 +393,6 @@ button:focus-visible {
   z-index: 0;
 }
 
-/* Replace old dot grid */
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  opacity: 0;
-  pointer-events: none;
-}
 
 .hero-content {
   grid-column: 3 / 11;
@@ -496,9 +478,6 @@ button:focus-visible {
   50% { opacity: 0.6; transform: scale(0.8); }
 }
 
-.hero-greeting {
-  display: none; /* Removed in new design — coordinate marker replaces it */
-}
 
 .hero-name {
   font-family: var(--font-display);
@@ -511,13 +490,6 @@ button:focus-visible {
   text-align: left;
 }
 
-/* "BI" em destaque */
-.hero-name .accent {
-  background: linear-gradient(135deg, var(--primary), var(--primary-container));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
 
 .hero-role {
   font-family: var(--font-display);
@@ -573,11 +545,12 @@ button:focus-visible {
   font-weight: 500;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  transition: opacity 150ms ease;
+  transition: opacity 200ms ease, transform 200ms ease;
 }
 
 .btn-primary:hover {
   opacity: 0.88;
+  transform: translateY(-1px);
 }
 
 .btn-outline {
@@ -590,13 +563,14 @@ button:focus-visible {
   font-weight: 400;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  transition: background 150ms ease, color 150ms ease, border-color 150ms ease;
+  transition: background 200ms ease, color 200ms ease, border-color 200ms ease, transform 200ms ease;
 }
 
 .btn-outline:hover {
   background: var(--on-surface);
   color: var(--absolute-black);
   border-color: var(--on-surface);
+  transform: translateY(-1px);
 }
 
 /* Scroll hint */
@@ -627,7 +601,7 @@ button:focus-visible {
 @keyframes fade-in {
   from {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(16px);
   }
   to {
     opacity: 1;
@@ -636,20 +610,28 @@ button:focus-visible {
 }
 
 .coordinate-marker {
-  animation: fade-in 0.4s ease both;
-  animation-delay: 0.05s;
+  animation: fade-in 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+  animation-delay: 0.1s;
+}
+.hero-badge {
+  animation: fade-in 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+  animation-delay: 0.2s;
 }
 .hero-title-anim {
-  animation: fade-in 0.4s ease both;
-  animation-delay: 0.15s;
+  animation: fade-in 0.6s cubic-bezier(0.4, 0, 0.2, 1) both;
+  animation-delay: 0.3s;
 }
 .hero-tagline-anim {
-  animation: fade-in 0.4s ease both;
-  animation-delay: 0.25s;
+  animation: fade-in 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+  animation-delay: 0.5s;
+}
+.hero-description {
+  animation: fade-in 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+  animation-delay: 0.6s;
 }
 .hero-actions-anim {
-  animation: fade-in 0.4s ease both;
-  animation-delay: 0.35s;
+  animation: fade-in 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+  animation-delay: 0.7s;
 }
 
 /* ===========================
@@ -698,43 +680,14 @@ button:focus-visible {
   color: var(--on-surface-variant);
   margin-bottom: 1.125rem;
   font-size: var(--body-lg);
-  line-height: 1.75;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
 }
 
 .about-text p:last-child {
   margin-bottom: 0;
 }
 
-.about-stats {
-  display: flex;
-  flex-direction: row;
-  gap: 2.5rem;
-  flex-shrink: 0;
-}
-
-.stat {
-  display: flex;
-  flex-direction: column;
-}
-
-.stat-number {
-  font-size: 2.25rem;
-  font-weight: 700;
-  letter-spacing: -0.05em;
-  background: linear-gradient(135deg, var(--primary), var(--primary-container));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  line-height: 1;
-  font-variant-numeric: tabular-nums;
-}
-
-.stat-label {
-  font-size: var(--label-sm);
-  color: var(--outline);
-  margin-top: 0.375rem;
-  white-space: nowrap;
-}
 
 /* ===========================
    PROJECTS — Cards
@@ -756,7 +709,7 @@ button:focus-visible {
   border: none;
   padding: var(--spacing-lg);
   position: relative;
-  transition: background 200ms ease;
+  transition: background 250ms ease, transform 250ms ease;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -776,6 +729,7 @@ button:focus-visible {
 
 .card:hover {
   background: var(--surface-container);
+  transform: translateY(-2px);
 }
 
 .card:hover::before {
@@ -828,12 +782,6 @@ button:focus-visible {
   color: var(--on-surface-variant);
 }
 
-.card-icon--blue,
-.card-icon--violet,
-.card-icon--green {
-  background: var(--surface-container);
-  color: var(--on-surface-variant);
-}
 
 .card-links {
   display: flex;
@@ -872,7 +820,8 @@ button:focus-visible {
   font-weight: 300;
   color: var(--on-surface-variant);
   flex: 1;
-  line-height: 1.6;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
 }
 
 .card-tags {
@@ -928,7 +877,7 @@ button:focus-visible {
 .certs-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 @media (min-width: 560px) {
@@ -946,12 +895,12 @@ button:focus-visible {
 .cert-card {
   background: var(--surface-container-low);
   border: none;
-  padding: 1.25rem 1.5rem;
+  padding: var(--spacing-lg);
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.5rem;
   position: relative;
-  transition: background 200ms ease;
+  transition: background 250ms ease, transform 250ms ease;
 }
 
 .cert-card::before {
@@ -967,6 +916,7 @@ button:focus-visible {
 
 .cert-card:hover {
   background: var(--surface-container);
+  transform: translateY(-2px);
 }
 
 .cert-card:hover::before {
@@ -1020,7 +970,13 @@ button:focus-visible {
   gap: 2.5rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 640px) and (max-width: 768px) {
+  .skills-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 769px) {
   .skills-wrapper {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1078,7 +1034,7 @@ button:focus-visible {
 .skill-pill:hover {
   border-top-color: var(--outline);
   background: transparent;
-  color: var(--on-surface-variant);
+  color: var(--on-surface);
 }
 
 .skill-icon {
@@ -1087,15 +1043,27 @@ button:focus-visible {
   width: 24px;
   height: 24px;
   object-fit: contain;
-  filter: grayscale(0%) brightness(1);
-  transition: filter 150ms ease;
+  filter: brightness(1.15) saturate(1.1);
+  opacity: 0.85;
+  transition: opacity 200ms ease, transform 200ms ease, filter 200ms ease;
 }
 
-/* SVG skill icons */
+.skill-pill:hover .skill-icon {
+  opacity: 1;
+  filter: brightness(1.3) saturate(1.2);
+  transform: scale(1.1);
+}
+
+/* SVG skill icons (inline) */
 .skill-pill svg.skill-icon {
   filter: none;
+  opacity: 0.85;
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.skill-pill:hover svg.skill-icon {
   opacity: 1;
-  transition: opacity 150ms ease;
+  transform: scale(1.1);
 }
 
 /* ===========================
@@ -1156,7 +1124,7 @@ button:focus-visible {
   flex-direction: column;
   gap: 0.5rem;
   position: relative;
-  transition: background 200ms ease;
+  transition: background 250ms ease, transform 250ms ease;
 }
 
 .exp-card::before {
@@ -1172,6 +1140,7 @@ button:focus-visible {
 
 .exp-card:hover {
   background: var(--surface-container);
+  transform: translateY(-2px);
 }
 
 .exp-card:hover::before {
@@ -1222,7 +1191,8 @@ button:focus-visible {
 .exp-description {
   font-size: var(--body-md);
   color: var(--on-surface-variant);
-  line-height: 1.65;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
   margin-top: 0.25rem;
   font-weight: 300;
 }
@@ -1244,7 +1214,7 @@ button:focus-visible {
   align-items: flex-start;
   gap: 1.25rem;
   position: relative;
-  transition: background 200ms ease;
+  transition: background 250ms ease, transform 250ms ease;
 }
 
 .edu-card::before {
@@ -1260,6 +1230,7 @@ button:focus-visible {
 
 .edu-card:hover {
   background: var(--surface-container);
+  transform: translateY(-2px);
 }
 
 .edu-card:hover::before {
@@ -1310,7 +1281,8 @@ button:focus-visible {
   color: var(--on-surface-variant);
   margin-bottom: 2.5rem;
   font-size: var(--body-lg);
-  line-height: 1.75;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
   font-weight: 300;
 }
 
@@ -1373,12 +1345,13 @@ button:focus-visible {
    FOOTER
 =========================== */
 .footer {
-  padding: 2.5rem 1.5rem;
+  padding: var(--spacing-xl) 1.5rem;
   text-align: left;
   font-size: var(--label-md);
   color: var(--outline);
-  border-top: 1px solid rgba(71, 71, 71, 0.3);
+  border-top: 1px solid rgba(71, 71, 71, 0.2);
   background: var(--absolute-black);
+  letter-spacing: 0.02em;
 }
 
 /* ===========================
@@ -1386,10 +1359,10 @@ button:focus-visible {
 =========================== */
 .reveal {
   opacity: 0;
-  transform: translateY(16px);
+  transform: translateY(20px);
   transition:
-    opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .reveal.visible {
@@ -1480,13 +1453,6 @@ button:focus-visible {
     padding-block: 4rem;
   }
 
-  .about-stats {
-    gap: 1.5rem;
-  }
-
-  .stat-number {
-    font-size: 1.75rem;
-  }
 }
 
 @media (max-width: 768px) {
@@ -1494,4 +1460,23 @@ button:focus-visible {
     grid-column: 1 / -1;
     padding: var(--spacing-2xl) var(--spacing-md);
   }
+
+  .hero-cta {
+    gap: var(--spacing-sm);
+  }
+
+  .btn-primary,
+  .btn-outline {
+    padding: 10px 20px;
+    font-size: var(--label-sm);
+  }
+
+  .nav {
+    padding-inline: 1.25rem;
+  }
+}
+
+/* Prevent horizontal overflow globally */
+main {
+  overflow-x: hidden;
 }
