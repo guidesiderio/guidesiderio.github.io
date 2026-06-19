@@ -1,4 +1,4 @@
-// Nav — scroll shadow
+// Nav: scroll shadow
 const nav = document.querySelector('.nav');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 20);
@@ -116,7 +116,7 @@ function applyLanguage(lang) {
         // For buttons with SVG + text: find the text span or set directly
         const spans = el.querySelectorAll('[data-lang-pt], [data-lang-en]');
         if (spans.length === 0 && el.dataset.langPt && el.dataset.langEn) {
-          // Element has both attrs and mixed content — just update text nodes
+          // Element has both attrs and mixed content, so just update text nodes
           childNodes.forEach((node) => {
             if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
               node.textContent = '\n              ' + text + '\n            ';
@@ -127,7 +127,7 @@ function applyLanguage(lang) {
     }
   });
 
-  // Special case: "Ver projetos" button has SVG child — handle its text
+  // Special case: "Ver projetos" button has SVG child, so handle its text
   const btnPrimary = document.querySelector('.btn-primary[data-lang-pt]');
   if (btnPrimary) {
     const btnText = btnPrimary.getAttribute(attr);

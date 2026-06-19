@@ -1,5 +1,5 @@
 /* ===========================
-   RESET & BASE — The Technical Observer
+   RESET & BASE: The Technical Observer
 =========================== */
 *,
 *::before,
@@ -7,11 +7,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border-radius: 0 !important; /* Zero rounding — não negociável */
+  border-radius: 0 !important; /* Zero rounding, não negociável */
 }
 
 :root {
-  /* Superfícies — profundidade via tonal layering */
+  /* Superfícies: profundidade via tonal layering */
   --surface: #131313;
   --surface-container-low: #1b1b1b;
   --surface-container: #222222;
@@ -24,7 +24,7 @@
   --outline: #919191;
   --outline-variant: #474747;
 
-  /* Botão primário — "machined metal" */
+  /* Botão primário: "machined metal" */
   --primary: #ffffff;
   --primary-container: #d4d4d4;
   --on-primary: #000000;
@@ -178,7 +178,7 @@ button:focus-visible,
 }
 
 /* ===========================
-   SECTION HEADERS — numbered coordinates
+   SECTION HEADERS: numbered coordinates
 =========================== */
 .section-header {
   display: flex;
@@ -451,7 +451,7 @@ button:focus-visible,
   background: var(--outline-variant);
 }
 
-/* Hero badge — adapted to dark theme */
+/* Hero badge: adapted to dark theme */
 .hero-badge {
   display: inline-flex;
   align-items: center;
@@ -690,7 +690,7 @@ button:focus-visible,
 
 
 /* ===========================
-   PROJECTS — Cards
+   PROJECTS: Cards
 =========================== */
 .projects-grid {
   display: grid;
@@ -859,6 +859,29 @@ button:focus-visible,
   font-family: var(--font-display);
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+/* Featured badge: mirrors .badge-private, brighter to signal the highlight project */
+.badge-featured {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: var(--label-sm);
+  font-weight: 500;
+  padding: 2px 8px;
+  background: transparent;
+  color: var(--on-surface);
+  border: 1px solid var(--outline);
+  white-space: nowrap;
+  font-family: var(--font-display);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Featured card: strengthens the existing left ghost border */
+.card--featured::before {
+  background: var(--outline);
+  width: 2px;
 }
 
 .card-institution {

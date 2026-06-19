@@ -7,7 +7,7 @@
 
 This design system is a radical departure from the soft, approachable "SaaS" aesthetic. It is inspired by the precision of a Leica view-finder, the raw structural integrity of a blueprint, and the unapologetic clarity of a brutalist photography portfolio.
 
-The goal is not to "guide" the user through friendly metaphors, but to present content with the clinical authority of a curated archive. We break the template look through **Intentional Asymmetry**—where the layout feels like a photographic composition—and **Visible Infrastructure**, utilizing technical markers and grid lines as primary decorative elements. Every pixel must feel intentional, sharp, and engineered.
+The goal is not to "guide" the user through friendly metaphors, but to present content with the clinical authority of a curated archive. We break the template look through **Intentional Asymmetry** (where the layout feels like a photographic composition) and **Visible Infrastructure**, utilizing technical markers and grid lines as primary decorative elements. Every pixel must feel intentional, sharp, and engineered.
 
 ---
 
@@ -32,7 +32,7 @@ The color palette is built on a foundation of absolute contrast. We utilize a mo
 
 Typography is the architecture of this system. We use a dual-font approach to balance technical precision with editorial impact.
 
-- **Display & Headlines (Space Grotesk):** These are your "shouting" elements. Used for large-scale headers (`display-lg` at 3.5rem). The leading should be set to 0.9x or 1.0x—tight enough that the descenders almost touch the ascenders of the line below. This creates a block-like, architectural footprint.
+- **Display & Headlines (Space Grotesk):** These are your "shouting" elements. Used for large-scale headers (`display-lg` at 3.5rem). The leading should be set to 0.9x or 1.0x, tight enough that the descenders almost touch the ascenders of the line below. This creates a block-like, architectural footprint.
 
 - **Technical Labels (Space Grotesk):** Use `label-sm` for coordinate markers (e.g., '01', '02') and metadata. These should always be uppercase or paired with technical symbols.
 
@@ -48,7 +48,7 @@ Standard shadows and "floating" cards have no place here. We communicate hierarc
 
 - **The Layering Principle:** Stack `surface-container` tiers to create hierarchy. To lift a component, don't add a shadow; change its background from `surface` to `surface-container-lowest`.
 
-- **The "Ghost Border":** If a separation is required for accessibility, use a "Ghost Border"—a 1px line using `outline-variant` at 20% opacity. This should look like a faint pencil mark on a blueprint.
+- **The "Ghost Border":** If a separation is required for accessibility, use a "Ghost Border", a 1px line using `outline-variant` at 20% opacity. This should look like a faint pencil mark on a blueprint.
 
 - **View-finder Elements:** Use 'L-shaped' corner brackets (8px length, 1px thickness) to frame images or primary content blocks. These act as "optical containers" that guide the eye without closing off the layout.
 
