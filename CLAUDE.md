@@ -35,20 +35,25 @@ All content lives in three files:
 
 **Accessibility:** skip-link, `aria-label`/`aria-expanded` on interactive elements, `prefers-reduced-motion` support, `noscript` fallback for reveal animations, focus-visible outlines.
 
-**Static assets:** `assets/icons/` contains local SVGs (favicon, Power BI, Excel, VS Code); `assets/curriculum.pdf` is the downloadable résumé.
+**Static assets:** `assets/icons/` contains local SVGs (favicon "GD" monogram, Power BI, Excel, VS Code); `assets/curriculum.pdf` is the downloadable résumé.
 
 ## Current Content
 
 **Experiences:**
-- Estagiário de BI / Governança de Dados, Tribunal de Justiça do Piauí (TJPI), out. 2025 a presente
-- Estagiário de BI, PRAD, Universidade Federal do Piauí (UFPI), mar. 2026 a presente
+- Estagiário Dados / Governança de Dados, Tribunal de Justiça do Piauí (TJPI), out. 2025 a presente
+- Estagiário de Dados / BI, PRAD, Universidade Federal do Piauí (UFPI), mar. 2026 a presente
 
-**Projects:**
-- Docker Data Pipeline (pessoal, GitHub público)
-- Dashboard das Salas de Audiência, CEJUSC I (TJPI, institucional)
-- Dashboard de Partes sem CPF/CNPJ (TJPI, institucional)
-- Dashboard de Complementos Inválidos (TJPI, institucional)
-- Maleta Digital da Fiscalização (PRAD/UFPI, link público via Vercel)
+**Projects (active cards in `index.html`):**
+- Painel de Contratos (PRAD/UFPI, destaque, link público)
+- Painel das Salas de Audiência do CEJUSC I (TJPI, institucional)
+- Painel de Partes Executadas sem CPF/CNPJ (TJPI, institucional)
+- Painel de Complementos de Movimentos Inválidos (TJPI, institucional)
+- Painel de Distribuição do 2º Grau (TJPI, institucional)
+- Painel de Suspensão (TJPI, institucional)
+
+**Disabled project cards (commented out in `index.html`, kept for future reactivation):** Docker Data Pipeline (pessoal, GitHub público), Maleta Digital da Fiscalização (PRAD/UFPI, link público via Vercel).
+
+**PT terminology:** PT-facing copy uses "Painel" (not "Dashboard"); `data-lang-en` keeps "Dashboard".
 
 **Skills (3 groups):**
 - Dados & BI: Python, Pandas, NumPy, SQL, Power BI, Qlik Sense, Looker Studio, Excel
