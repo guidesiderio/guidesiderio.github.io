@@ -41,7 +41,7 @@ All content lives in three files:
 
 **Experiences:**
 - Estagiário Dados / Governança de Dados, Tribunal de Justiça do Piauí (TJPI), out. 2025 a presente
-- Estagiário de Dados / BI, PRAD, Universidade Federal do Piauí (UFPI), mar. 2026 a presente
+- Estagiário de Dados / BI, PRAD, Universidade Federal do Piauí (UFPI), mar. 2026 a jul. 2026 (concluído)
 
 **Projects (active cards in `index.html`):**
 - Painel de Contratos (PRAD/UFPI, destaque, link público)
