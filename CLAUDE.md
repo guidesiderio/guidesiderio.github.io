@@ -42,7 +42,6 @@ All content lives in three files:
 **Experiences:**
 - Estagiário de Dados & BI, Tribunal de Justiça do Piauí (TJPI), out. 2025 a presente
 - Estagiário de Dados / BI, PRAD, Universidade Federal do Piauí (UFPI), mar. 2026 a jul. 2026 (concluído)
-- Estagiário de TI, Grupo Educacional CEV, set. 2022 a mar. 2023
 
 **Projects (active cards in `index.html`):**
 - Painel de Contratos (PRAD/UFPI, destaque, link público)
@@ -50,9 +49,7 @@ All content lives in three files:
 - Painel de Monitoramento da Política Antimanicomial (TJPI, institucional)
 - Painel das Salas de Audiência dos CEJUSCs (TJPI, institucional)
 - Painel de Partes Executadas sem CPF/CNPJ (TJPI, institucional)
-- Painel de Complementos de Movimentos Inválidos (TJPI, institucional)
 - Painel de Distribuição do 2º Grau (TJPI, institucional)
-- Painel de Suspensão (TJPI, institucional)
 
 **Disabled project cards (commented out in `index.html`, kept for future reactivation):** Docker Data Pipeline (pessoal, GitHub público), Maleta Digital da Fiscalização (PRAD/UFPI, link público via Vercel).
 
@@ -63,7 +60,7 @@ All content lives in three files:
 - Infraestrutura: Docker, PostgreSQL, MySQL, Supabase, Jupyter, Airflow
 - Dev & Ferramentas: Git & GitHub, Linux, DBeaver, VS Code
 
-**Certificates:** AWS Fundamentos de Nuvem, SQL para Análise de Dados (Udemy), Engenheiro de Dados Associado em SQL (DataCamp), Inteligência Artificial e Computacional (FIAP)
+**Certificates:** SQL para Análise de Dados (Udemy), Engenheiro de Dados Associado em SQL (DataCamp), Inteligência Artificial e Computacional (FIAP)
 
 ## Deployment
 
