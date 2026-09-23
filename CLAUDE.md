@@ -50,8 +50,11 @@ All content lives in three files:
 - Painel das Salas de Audiência dos CEJUSCs (TJPI, institucional)
 - Painel de Partes Executadas sem CPF/CNPJ (TJPI, institucional)
 - Painel de Distribuição do 2º Grau (TJPI, institucional)
+- pipeline_weather (pessoal, GitHub público)
+- docker-data-project (pessoal, GitHub público)
+- Multi-agent-ACL (pessoal, GitHub público)
 
-**Disabled project cards (commented out in `index.html`, kept for future reactivation):** Docker Data Pipeline (pessoal, GitHub público), Maleta Digital da Fiscalização (PRAD/UFPI, link público via Vercel).
+**Disabled project cards (commented out in `index.html`, kept for future reactivation):** Maleta Digital da Fiscalização (PRAD/UFPI, link público via Vercel).
 
 **PT terminology:** PT-facing copy uses "Painel" (not "Dashboard"); `data-lang-en` keeps "Dashboard".
 
