@@ -35,17 +35,20 @@ All content lives in three files:
 
 **Accessibility:** skip-link, `aria-label`/`aria-expanded` on interactive elements, `prefers-reduced-motion` support, `noscript` fallback for reveal animations, focus-visible outlines.
 
-**Static assets:** `assets/icons/` contains local SVGs (favicon "GD" monogram, Power BI, Excel, VS Code); `assets/curriculum.pdf` is the downloadable résumé.
+**Static assets:** `assets/icons/` contains local SVGs (favicon "GD" monogram, Power BI, Excel, VS Code); `assets/curriculum.pdf` is the downloadable résumé, compiled from `assets/curriculum.tex` with `pdflatex` (keep it to one page).
 
 ## Current Content
 
 **Experiences:**
-- Estagiário Dados / Governança de Dados, Tribunal de Justiça do Piauí (TJPI), out. 2025 a presente
+- Estagiário de Dados & BI, Tribunal de Justiça do Piauí (TJPI), out. 2025 a presente
 - Estagiário de Dados / BI, PRAD, Universidade Federal do Piauí (UFPI), mar. 2026 a jul. 2026 (concluído)
+- Estagiário de TI, Grupo Educacional CEV, set. 2022 a mar. 2023
 
 **Projects (active cards in `index.html`):**
 - Painel de Contratos (PRAD/UFPI, destaque, link público)
-- Painel das Salas de Audiência do CEJUSC I (TJPI, institucional)
+- Painel de Monitoramento da Lotação Paradigma (TJPI, institucional)
+- Painel de Monitoramento da Política Antimanicomial (TJPI, institucional)
+- Painel das Salas de Audiência dos CEJUSCs (TJPI, institucional)
 - Painel de Partes Executadas sem CPF/CNPJ (TJPI, institucional)
 - Painel de Complementos de Movimentos Inválidos (TJPI, institucional)
 - Painel de Distribuição do 2º Grau (TJPI, institucional)
@@ -56,11 +59,11 @@ All content lives in three files:
 **PT terminology:** PT-facing copy uses "Painel" (not "Dashboard"); `data-lang-en` keeps "Dashboard".
 
 **Skills (3 groups):**
-- Dados & BI: Python, Pandas, NumPy, SQL, Power BI, Qlik Sense, Looker Studio, Excel
-- Infraestrutura: Docker, PostgreSQL, MySQL, Supabase, Jupyter
+- Dados & BI: Python, Pandas, NumPy, SQL, Qlik Sense, Looker Studio, Excel
+- Infraestrutura: Docker, PostgreSQL, MySQL, Supabase, Jupyter, Airflow
 - Dev & Ferramentas: Git & GitHub, Linux, DBeaver, VS Code
 
-**Certificates:** AWS Fundamentos de Nuvem, SQL para Análise de Dados (Udemy), Inteligência Artificial e Computacional (FIAP)
+**Certificates:** AWS Fundamentos de Nuvem, SQL para Análise de Dados (Udemy), Engenheiro de Dados Associado em SQL (DataCamp), Inteligência Artificial e Computacional (FIAP)
 
 ## Deployment
 

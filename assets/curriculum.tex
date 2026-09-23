@@ -1,0 +1,176 @@
+%-------------------------
+% Currículo de Guilherme Desidério
+% Compilar com: pdflatex curriculum.tex
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+%-------------------------
+% Comandos
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Guilherme Oliveira Desidério} \\ \vspace{1pt}
+    \small Teresina, Piauí, Brasil $|$ (86) 99570-4214 $|$
+    \href{mailto:guilhermedesiderio23@gmail.com}{\underline{guilhermedesiderio23@gmail.com}} $|$
+    \href{https://www.linkedin.com/in/guidesiderio/}{\underline{linkedin.com/in/guidesiderio}} $|$
+    \href{https://github.com/guidesiderio}{\underline{github.com/guidesiderio}} $|$
+    \href{https://guidesiderio.github.io}{\underline{guidesiderio.github.io}}
+\end{center}
+
+%-----------EDUCAÇÃO-----------
+\section{Educação}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Universidade Federal do Piauí (UFPI)}{Teresina, PI}
+      {Bacharelado em Ciência da Computação}{Fev. 2022 a Jul. 2027}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIÊNCIA-----------
+\section{Experiência}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Tribunal de Justiça do Estado do Piauí (TJ-PI)}{Out. 2025 até o momento}
+      {Estagiário de Dados \& BI}{Teresina, PI}
+      \resumeItemListStart
+        \resumeItem{Painéis no Qlik Sense (on-premise e Cloud) para a gestão judiciária, com extração e saneamento via SQL no PJe e no data warehouse (PostgreSQL), com CTEs, funções de janela e scripts parametrizados}
+        \resumeItem{Modelagem e ETL no Qlik: cargas incrementais em QVD, Master Calendar e LinkTable}
+        \resumeItem{Integração via REST e DataJud/CNJ; administração no QMC; sprints no CAPTEI 3.0, GLPI e SEI}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Universidade Federal do Piauí (PRAD)}{Mar. 2026 a Jul. 2026}
+      {Estagiário de Dados \& BI}{Teresina, PI}
+      \resumeItemListStart
+        \resumeItem{Primeiro projeto de BI da universidade, o Painel de Contratos no Looker Studio, do levantamento de requisitos à entrega; apresentado à Reitoria e adotado como referência}
+        \resumeItem{Qualidade de dados da planilha da CCON, automação em Google Apps Script e landing page institucional (HTML/CSS/JS)}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Grupo Educacional CEV}{Set. 2022 a Mar. 2023}
+      {Estagiário de TI}{Teresina, PI}
+      \resumeItemListStart
+        \resumeItem{HelpDesk: triagem de chamados e manutenção de computadores, impressoras e datashows}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJETOS-----------
+\section{Projetos}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {\textbf{Painel de Monitoramento da Lotação Paradigma} $|$ \emph{Qlik Sense, PostgreSQL, SQL}}{TJ-PI, 2026}
+          \resumeItemListStart
+            \resumeItem{Lotação real versus ideal em 331 unidades, com classificação por déficit, servidores, afastamentos e mapa por comarca}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Painel de Monitoramento da Política Antimanicomial} $|$ \emph{Qlik Sense, PostgreSQL, BNMP 3.0}}{TJ-PI, 2026}
+          \resumeItemListStart
+            \resumeItem{Medidas de segurança vigentes e desinternações não cumpridas (BNMP 3.0); entregue 15 dias antes do prazo e aceito sem ajustes}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Painel de Distribuição do 2º Grau} $|$ \emph{Qlik Sense, PostgreSQL, QVD}}{TJ-PI, 2026}
+          \resumeItemListStart
+            \resumeItem{Histórico diário dos acumuladores de distribuição, que o PJe não guarda; homologado pela Secretaria Judiciária}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Painel das Salas de Audiência dos CEJUSCs} $|$ \emph{Qlik Sense, PostgreSQL, PJe}}{TJ-PI, 2026}
+          \resumeItemListStart
+            \resumeItem{Ocupação diária e acordos por sala e por conciliador em 32 salas dos CEJUSCs de Teresina I e II}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Painel de Partes Executadas sem CPF/CNPJ} $|$ \emph{Qlik Sense, PostgreSQL, QVD}}{TJ-PI, 2026}
+          \resumeItemListStart
+            \resumeItem{Execuções fiscais sem CPF/CNPJ do executado, com série histórica mensal em QVD; validado pela Corregedoria-Geral}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Painel de Contratos CCON} $|$ \emph{Looker Studio, Google Sheets} $|$ \href{https://ufpi.br/ccon/painel-contratos-ccon}{\underline{ver projeto}}}{PRAD/UFPI, 2026}
+          \resumeItemListStart
+            \resumeItem{Primeiro painel de BI da universidade, com a carteira de contratos por status, campus, categoria e modalidade}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+%-----------HABILIDADES-----------
+\section{Habilidades Técnicas}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Dados \& BI}{: SQL, PostgreSQL, MySQL, Qlik Sense (on-premise e Cloud), Looker Studio, ETL, modelagem de dados} \\
+     \textbf{Linguagens}{: Python (Pandas, NumPy), JavaScript, HTML, CSS} \\
+     \textbf{Infraestrutura}{: Docker, Airflow, Supabase, Git/GitHub, Linux} \\
+     \textbf{Ferramentas}{: DBeaver, Jupyter Notebook, VS Code, Excel, Google Sheets, Google Apps Script} \\
+     \textbf{Sistemas Institucionais}{: SEI, PJe, CAPTEI 3.0, GLPI} \\
+     \textbf{Certificações}{: Engenheiro de Dados Associado em SQL (DataCamp), AWS Fundamentos de Nuvem (AWS Treina Brasil), SQL para Análise de Dados (Udemy), Inteligência Artificial e Computacional (FIAP)}
+    }}
+ \end{itemize}
+
+\end{document}
