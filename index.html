@@ -321,7 +321,7 @@
                 <p
                   class="exp-description"
                   data-lang-pt="Painéis em Qlik Sense (on-premise e Cloud) com responsabilidade sobre a camada de dados: extração e saneamento via SQL no PJe e no data warehouse (PostgreSQL), modelagem e cargas incrementais em QVD. Destaques: Painel de Lotação Paradigma, que cobre 331 unidades judiciárias e é usado pela alta administração, e Painel da Política Antimanicomial, entregue 15 dias antes do prazo e aceito pela Corregedoria-Geral sem pedido de ajuste."
-                  data-lang-en="Qlik Sense dashboards (on-premise and Cloud) with ownership of the data layer: SQL extraction and cleansing from PJe and the data warehouse (PostgreSQL), modeling and incremental QVD loads. Highlights: the Staffing Baseline dashboard, covering 331 judicial units and used by the court's senior management, and the Anti-Institutionalization Policy dashboard, delivered 15 days ahead of schedule and accepted by the Inspectorate General with no requested changes."
+                  data-lang-en="Qlik Sense dashboards (on-premise and Cloud) with ownership of the data layer: SQL extraction and cleansing from PJe and the data warehouse (PostgreSQL), modeling and incremental QVD loads. Highlights: the Staffing Baseline dashboard, covering 331 judicial units and used by the court's senior management, and the Deinstitutionalization Policy (CNJ Res. 487/2023) dashboard, delivered 15 days ahead of schedule and accepted by the Inspectorate General with no requested changes."
                 >
                   Painéis em Qlik Sense (on-premise e Cloud) com responsabilidade sobre a camada de
                   dados: extração e saneamento via SQL no PJe e no data warehouse (PostgreSQL),
@@ -590,22 +590,21 @@
               <h3
                 class="card-title"
                 data-lang-pt="Painel de Monitoramento da Política Antimanicomial"
-                data-lang-en="Anti-Institutionalization Policy Monitoring (CNJ Res. 487/2023)"
+                data-lang-en="Deinstitutionalization Policy Monitoring (CNJ Res. 487/2023)"
               >
                 Painel de Monitoramento da Política Antimanicomial
               </h3>
               <p
                 class="card-description"
-                data-lang-pt="Demanda da Corregedoria-Geral da Justiça para acompanhar as medidas de segurança e internações psiquiátricas (Resolução CNJ nº 487/2023), cujos dados existiam no BNMP 3.0 apenas como peças judiciais avulsas. Defini as regras de negócio que abrem e encerram uma medida, ancorando o encerramento na pessoa e não no processo, e criei uma situação própria para desinternações determinadas e não cumpridas. O painel tem cinco abas, incluindo lista nominal com acesso restrito e uma aba de qualidade do dado. Entregue 15 dias antes do prazo e aceito pela Corregedoria sem pedido de ajuste."
-                data-lang-en="Request from the General Inspectorate of Justice to monitor security measures and psychiatric commitments (CNJ Resolution 487/2023), whose data existed in BNMP 3.0 only as scattered court documents. I defined the business rules that open and close a measure, anchoring closure on the person rather than the case, and created a dedicated status for release orders issued but not carried out. The dashboard has five tabs, including a restricted-access named list and a data quality tab. Delivered 15 days ahead of the deadline and accepted by the Inspectorate with no change requests."
+                data-lang-pt="Demanda da Corregedoria-Geral da Justiça para acompanhar as medidas de segurança e internações psiquiátricas (Resolução CNJ nº 487/2023), cujos dados existiam no BNMP 3.0 apenas como peças judiciais avulsas. Defini as regras de negócio que abrem e encerram uma medida, ancorando o encerramento na pessoa e não no processo, e criei uma situação própria para desinternações determinadas e não cumpridas. O painel tem cinco abas, incluindo uma aba de qualidade do dado. Entregue 15 dias antes do prazo e aceito pela Corregedoria sem pedido de ajuste."
+                data-lang-en="Request from the General Inspectorate of Justice to monitor security measures and psychiatric commitments (CNJ Resolution 487/2023), whose data existed in BNMP 3.0 only as scattered court documents. I defined the business rules that open and close a measure, anchoring closure on the person rather than the case, and created a dedicated status for release orders issued but not carried out. The dashboard has five tabs, including a data quality tab. Delivered 15 days ahead of the deadline and accepted by the Inspectorate with no change requests."
               >
                 Demanda da Corregedoria-Geral da Justiça para acompanhar as medidas de segurança e
                 internações psiquiátricas (Resolução CNJ nº 487/2023), cujos dados existiam no BNMP
                 3.0 apenas como peças judiciais avulsas. Defini as regras de negócio que abrem e
                 encerram uma medida, ancorando o encerramento na pessoa e não no processo, e criei
                 uma situação própria para desinternações determinadas e não cumpridas. O painel tem
-                cinco abas, incluindo lista nominal com acesso restrito e uma aba de qualidade do
-                dado. Entregue 15 dias antes do prazo e aceito pela Corregedoria sem pedido de
+                cinco abas, incluindo uma aba de qualidade do dado. Entregue 15 dias antes do prazo e aceito pela Corregedoria sem pedido de
                 ajuste.
               </p>
               <div class="card-tags">
@@ -739,11 +738,11 @@
               </h3>
               <p
                 class="card-description"
-                data-lang-pt="A Resolução CNJ nº 617/2025 acrescentou à Resolução nº 547/2024 a extinção das execuções fiscais sem CPF ou CNPJ do executado, e a Corregedoria-Geral da Justiça dependia de uma planilha avulsa do DataJud para encontrá-las. O painel lista as execuções fiscais em tramitação em que nenhuma parte do polo passivo tem documento, a partir do data warehouse (PostgreSQL), e grava uma foto mensal em QVD para formar a série histórica que a base não guarda. Durante o desenvolvimento, corrigi um erro de junção entre sistemas de origem que retirava processos do painel indevidamente. Entregue 12 dias antes da previsão e validado pela Corregedoria."
-                data-lang-en="CNJ Resolution 617/2025 added to Resolution 547/2024 the dismissal of tax enforcement cases where the defendant has no CPF or CNPJ, and the General Inspectorate of Justice relied on an ad hoc DataJud spreadsheet to find them. The dashboard lists active tax enforcement cases in which no defendant has a document, from the data warehouse (PostgreSQL), and stores a monthly snapshot in QVD to build the historical series the source does not keep. During development, I fixed a join error across source systems that was wrongly dropping cases from the dashboard. Delivered 12 days ahead of schedule and validated by the Inspectorate."
+                data-lang-pt="A Res. CNJ 547/2024, art. 1º-A, determina a extinção das execuções fiscais sem CPF ou CNPJ do executado, e a Corregedoria-Geral da Justiça dependia de uma planilha avulsa do DataJud para encontrá-las. O painel lista as execuções fiscais em tramitação em que nenhuma parte do polo passivo tem documento, a partir do data warehouse (PostgreSQL), e grava uma foto mensal em QVD para formar a série histórica que a base não guarda. Durante o desenvolvimento, corrigi um erro de junção entre sistemas de origem que retirava processos do painel indevidamente. Entregue 12 dias antes da previsão e validado pela Corregedoria."
+                data-lang-en="CNJ Res. 547/2024, art. 1-A, requires the dismissal of tax enforcement cases where the defendant has no CPF or CNPJ, and the General Inspectorate of Justice relied on an ad hoc DataJud spreadsheet to find them. The dashboard lists active tax enforcement cases in which no defendant has a document, from the data warehouse (PostgreSQL), and stores a monthly snapshot in QVD to build the historical series the source does not keep. During development, I fixed a join error across source systems that was wrongly dropping cases from the dashboard. Delivered 12 days ahead of schedule and validated by the Inspectorate."
               >
-                A Resolução CNJ nº 617/2025 acrescentou à Resolução nº 547/2024 a extinção das
-                execuções fiscais sem CPF ou CNPJ do executado, e a Corregedoria-Geral da Justiça
+                A Res. CNJ 547/2024, art. 1º-A, determina a extinção das execuções fiscais sem CPF
+                ou CNPJ do executado, e a Corregedoria-Geral da Justiça
                 dependia de uma planilha avulsa do DataJud para encontrá-las. O painel lista as
                 execuções fiscais em tramitação em que nenhuma parte do polo passivo tem documento, a
                 partir do data warehouse (PostgreSQL), e grava uma foto mensal em QVD para formar a
